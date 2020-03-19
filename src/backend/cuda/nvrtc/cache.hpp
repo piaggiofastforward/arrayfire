@@ -42,7 +42,8 @@ namespace cuda {
 struct Kernel {
     CUmodule prog;   ///< CUmodule helps acquire kernel attributes
     CUfunction ker;  ///< CUfuntion is the actual kernel blob to run
-
+    void  *cubin;
+    size_t binSize;
     ///
     /// \brief Copy data to constant qualified global variable of kernel
     ///
